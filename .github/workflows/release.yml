@@ -31,9 +31,14 @@ jobs:
         id: package
         shell: bash
         run: |
-          npm pack
-          echo "version=$(node -p \"require('./package.json').version\")" >> "$GITHUB_OUTPUT"
-          echo "tarball=$(ls dsh-better-model-thinking-control-*.tgz)" >> "$GITHUB_OUTPUT"
+          # npm pack emits JSON with the exact generated filename. This avoids
+          # relying on shell globbing when a runner has a stale local archive.
+          PACK_JSON="$(npm pack --json)"
+          VERSION="$(node -p "require('./package.json').version")"
+          TARBALL="$(node -e "const value = JSON.parse(process.argv[1]); process.stdout.write(value[0].filename)" "$PACK_JSON")"
+          test -f "$TARBALL"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tarball=$TARBALL" >> "$GITHUB_OUTPUT"
 
       - name: Update repository About and dsh-plugin topic
         # About and Topics are GitHub repository settings, not Git-tracked
