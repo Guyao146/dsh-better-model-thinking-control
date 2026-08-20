@@ -1,0 +1,4 @@
+# Activate the plugin in the DSH Web profile.
+- insert:
+    - id: better-model-thinking-control
+      name: 'dsh-better-model-thinking-control'
