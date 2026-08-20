@@ -27,7 +27,7 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 ```bash
 npm pack
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.1.0.tgz"
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.1.1.tgz"
 ```
 
 重启 DSH Web 后打开「设置 -> 插件 -> 插件配置」，展开「模型思考强度」。
@@ -58,6 +58,10 @@ llm-pi-ai:
 npm test
 npm pack
 ```
+
+### DSH 版本兼容性
+
+设置卡片同时声明旧版 DSH Web 的 `settings.plugin.item.id` 与新版 keyed slot 使用的 `key`。`0.1.1` 修复了旧版 DSH 报告 `list slot "settings.plugin.item" requires options.id` 的加载错误。升级后请重启 DSH Web，并用新打出的 `dsh-better-model-thinking-control-0.1.1.tgz` 重新执行一次 `dsh plugin --profile web add "file:<安装包路径>"`。
 
 ## 自动发布
 
