@@ -1,6 +1,6 @@
 # dsh-better-model-thinking-control
 
-![樱落生态成员](//api.mcylyr.cn/photo/logo/sakura-ecosystem-member.svg)
+![樱落生态成员](https://api.mcylyr.cn/photo/logo/sakura-ecosystem-member.svg)
 
 DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按中转站和模型设置思考强度，并从 OpenAI 兼容中转站自动拉取模型及公开的思考能力。
 
