@@ -24,9 +24,14 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 ## 安装
 
+Web版本 DSH
 ```bash
-npm pack
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.0.tgz"
+dsh plugin --profile web add dsh-better-model-thinking-control@latest
+```
+
+Desktop版本 DSH
+```bash
+dsh plugin --profile web add dsh-better-model-thinking-control@latest
 ```
 
 重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度」**。入口只出现在设置侧栏，不会在「插件」页重复显示。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。推理强度选项使用 `Off / Minimal / Low / Medium / High / XHigh / Max`。
