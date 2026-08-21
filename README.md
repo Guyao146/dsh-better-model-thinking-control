@@ -7,7 +7,7 @@
 DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按中转站和模型设置思考强度，并从 OpenAI 兼容中转站自动拉取模型及公开的思考能力。
 
 ## 樱落生态Wiki
-该项目已编写Wiki，阅读Wiki，了解插件更多细节 https://wiki.mcylyr.cn
+该项目已编写Wiki，了解插件更多细节 https://wiki.mcylyr.cn
 
 ## About
 
