@@ -29,7 +29,7 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 ```bash
 npm pack
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.1.9.tgz"
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.0.tgz"
 ```
 
 重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度」**。入口只出现在设置侧栏，不会在「插件」页重复显示。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。推理强度选项使用 `Off / Minimal / Low / Medium / High / XHigh / Max`。
@@ -63,7 +63,7 @@ npm pack
 
 ### DSH 版本兼容性
 
-`0.1.6` 起只注册设置侧栏中的独立「模型思考强度」入口，不再向「插件」页注册重复卡片；推理强度改为纯英文档位。`0.1.7` 将自动识别说明移到总标题下方，只显示一次。`0.1.8` 将档位勾选改为下拉多选。`0.1.9` 将模型名称、强度下拉栏和删除按钮调整为同一行，并将「非推理模型」收进下拉菜单。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.1.9.tgz`。
+`0.1.6` 起只注册设置侧栏中的独立「模型思考强度」入口，不再向「插件」页注册重复卡片；推理强度改为纯英文档位。`0.1.7` 将自动识别说明移到总标题下方，只显示一次。`0.1.8` 将档位勾选改为下拉多选。`0.1.9` 将模型名称、强度下拉栏和删除按钮调整为同一行，并将「非推理模型」收进下拉菜单。`0.2.0` 移除最外层卡片边框，仅保留中转站分组框，并固定三项控件的对齐布局。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.0.tgz`。
 
 ## 自动发布
 
