@@ -29,10 +29,10 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 ```bash
 npm pack
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.1.4.tgz"
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.1.5.tgz"
 ```
 
-重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度 / Model Thinking Effort」**。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。`0.1.3` 修复了部分 DSH 版本中入口存在但右侧内容为空的问题，`0.1.4` 增加中英双语、provider 折叠和一次性 Key。新版 DSH 还会在「设置 -> 插件 -> 插件配置」中显示同一张卡片。
+重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度」**。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。`0.1.3` 修复了部分 DSH 版本中入口存在但右侧内容为空的问题，`0.1.4` 增加中转站折叠和一次性 Key，`0.1.5` 移除了界面中的英文副文案。新版 DSH 还会在「设置 -> 插件 -> 插件配置」中显示同一张卡片。
 
 ## 配置结果示例
 
@@ -63,7 +63,7 @@ npm pack
 
 ### DSH 版本兼容性
 
-设置卡片同时声明旧版 DSH Web 的 `settings.plugin.item.id` 与新版 keyed slot 使用的 `key`。`0.1.1` 修复了旧版 DSH 报告 `list slot "settings.plugin.item" requires options.id` 的加载错误；`0.1.2` 额外注册独立设置页；`0.1.3` 修复入口右侧空白；`0.1.4` 增加 provider 折叠、中英双语和一次性 API Key。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.1.4.tgz`。
+设置卡片同时声明旧版 DSH Web 的 `settings.plugin.item.id` 与新版 keyed slot 使用的 `key`。`0.1.1` 修复了旧版 DSH 报告 `list slot "settings.plugin.item" requires options.id` 的加载错误；`0.1.2` 额外注册独立设置页；`0.1.3` 修复入口右侧空白；`0.1.4` 增加中转站折叠和一次性 API Key；`0.1.5` 清理界面英文副文案。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.1.5.tgz`。
 
 ## 自动发布
 
