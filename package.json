@@ -1,6 +1,6 @@
 {
   "name": "dsh-better-model-thinking-control",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DSH 中转站模型思考强度配置与自动识别插件",
   "keywords": [
     "dsh-plugin",

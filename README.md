@@ -21,12 +21,13 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 - 自动访问中转站的 OpenAI 兼容 `/models` 接口。
 - 识别常见扩展字段：`reasoning_efforts`、`supported_reasoning_efforts`、`thinking_levels`、`reasoning.efforts` 等，并保留网关自定义的 wire value。
 - API Key 不写入本插件配置；探测时只通过 DSH credentials 引用读取。
+- 每个模型可选择文字、图片、视频、语音输入模态；未配置时默认文字。模态选择保存在本插件的浏览器本地配置中。
 
 ## 安装
 
 Web版本 DSH
 ```bash
-dsh plugin --profile web add dsh-better-model-thinking-control@latest
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.1.tgz"
 ```
 
 Desktop版本 DSH
@@ -34,7 +35,7 @@ Desktop版本 DSH
 dsh plugin --profile web add dsh-better-model-thinking-control@latest
 ```
 
-重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度」**。入口只出现在设置侧栏，不会在「插件」页重复显示。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。推理强度选项使用 `Off / Minimal / Low / Medium / High / XHigh / Max`。
+重启 DSH Web 后，在设置左侧导航直接打开 **「模型思考强度」**。入口只出现在设置侧栏，不会在「插件」页重复显示。每个中转站都可展开/收起；自动拉取支持填写一次性 API Key（只用于本次请求，不会保存）。推理强度选项使用 `Off / Minimal / Low / Medium / High / XHigh / Max`。`0.2.1` 为每个模型增加输入模态选择：文字默认勾选，还可选择图片、视频、语音；这些模态设置保存在本插件的浏览器本地配置中。
 
 ## 配置结果示例
 
@@ -62,4 +63,5 @@ llm-pi-ai:
 `0.1.7` 将自动识别说明移到总标题下方，只显示一次。
 `0.1.8` 将档位勾选改为下拉多选。
 `0.1.9` 将模型名称、强度下拉栏和删除按钮调整为同一行，并将「非推理模型」收进下拉菜单。
-`0.2.0` 移除最外层卡片边框，仅保留中转站分组框，并固定三项控件的对齐布局。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.0.tgz`。
+`0.2.0` 移除最外层卡片边框，仅保留中转站分组框，并固定三项控件的对齐布局。
+`0.2.1` 增加每模型输入模态选择，文字默认勾选，配置保存在插件本地。视频和语音是插件侧能力标记，实际附件输入仍取决于 DSH 和模型适配器支持。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.1.tgz`。
