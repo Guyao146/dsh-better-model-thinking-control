@@ -27,7 +27,7 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 Web版本 DSH
 ```bash
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.4.tgz"
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.7.tgz"
 ```
 
 Desktop版本 DSH
@@ -67,4 +67,7 @@ llm-pi-ai:
 `0.2.1` 增加每模型输入模态选择，文字默认勾选，配置保存在插件本地。视频和语音是插件侧能力标记，实际附件输入仍取决于 DSH 和模型适配器支持。
 `0.2.2` 增加设置页模型搜索和主页面模型菜单搜索；模型行改为第一行模型名称/删除、第二行思考档位/输入模态。
 `0.2.3` 修正主页面模型搜索菜单样式并保持对 DSH 原生选择逻辑的兼容。
-`0.2.4` 使用统一三列网格对齐模型名称、删除按钮、思考档位和输入模态控件。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.4.tgz`。
+`0.2.4` 使用统一三列网格对齐模型名称、删除按钮、思考档位和输入模态控件。
+`0.2.5` 增加 `Ultra` 思考档位；自动拉取会保留网关返回的同模型思考档位和输入模态；中转站默认全部收起。
+`0.2.6` 修正新增模型的 Ultra 默认档位。
+`0.2.7` 在自动拉取时同时补全网关和 DSH 本地目录提供的思考档位、输入模态。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.7.tgz`。

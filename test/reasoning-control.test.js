@@ -27,3 +27,9 @@ test('uses null for off when an object entry omits a wire value', () => {
     off: null, high: 'high',
   })
 })
+
+test('keeps ultra reasoning effort and input modalities from gateway metadata', () => {
+  assert.deepEqual(parseReasoningEfforts({ reasoning_efforts: ['low', 'ultra'] }), {
+    low: 'low', ultra: 'ultra',
+  })
+})
