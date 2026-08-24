@@ -27,7 +27,7 @@ DSH Web 插件：在 DSH 自身的「设置 -> 插件 -> 插件配置」里按�
 
 Web版本 DSH
 ```bash
-dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.8.tgz"
+dsh plugin --profile web add "file:./dsh-better-model-thinking-control-0.2.9.tgz"
 ```
 
 Desktop版本 DSH
@@ -71,4 +71,5 @@ llm-pi-ai:
 `0.2.5` 增加 `Ultra` 思考档位；自动拉取会保留网关返回的同模型思考档位和输入模态；中转站默认全部收起。
 `0.2.6` 修正新增模型的 Ultra 默认档位。
 `0.2.7` 在自动拉取时同时补全网关和 DSH 本地目录提供的思考档位、输入模态。
-`0.2.8` 使用严格的两列网格对齐模型名称/删除与思考档位/输入模态。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.8.tgz`。
+`0.2.8` 使用严格的两列网格对齐模型名称/删除与思考档位/输入模态。
+`0.2.9` 恢复紧凑的模型名称/删除布局，将非推理模型纳入思考档位菜单，并让两个下拉菜单互斥避免重叠。升级后请重启 DSH Web，并安装新打出的 `dsh-better-model-thinking-control-0.2.9.tgz`。
